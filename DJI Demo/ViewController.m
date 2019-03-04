@@ -16,7 +16,7 @@
 @implementation ViewController
 
 - (void)registerApp {
-    
+    [DJISDKManager registerAppWithDelegate:self];
 }
 
 - (void)viewDidLoad {
@@ -24,45 +24,66 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self registerApp];
+}
+
 
 - (void)appRegisteredWithError:(NSError * _Nullable)error {
-    <#code#>
+    NSString* message = @"Register App Successed!";
+    if (error) {
+        message = @"Register App Failed! Please enter your App Key in the plist file and check the network.";
+    }else
+    {
+        NSLog(@"registerAppSuccess");
+    }
+    
+    [self showAlertViewWithTitle:@"Register App" withMessage:message];
+}
+
+- (void)showAlertViewWithTitle:(NSString *)title withMessage:(NSString *)message
+{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+    [alert addAction:okAction];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 - (void)encodeWithCoder:(nonnull NSCoder *)aCoder {
-    <#code#>
+    
 }
 
 - (void)traitCollectionDidChange:(nullable UITraitCollection *)previousTraitCollection {
-    <#code#>
+    
 }
 
 - (void)preferredContentSizeDidChangeForChildContentContainer:(nonnull id<UIContentContainer>)container {
-    <#code#>
+    
 }
 
 //- (CGSize)sizeForChildContentContainer:(nonnull id<UIContentContainer>)container withParentContainerSize:(CGSize)parentSize {
-//    <#code#>
+
 //}
 
 - (void)systemLayoutFittingSizeDidChangeForChildContentContainer:(nonnull id<UIContentContainer>)container {
-    <#code#>
+    
 }
 
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(nonnull id<UIViewControllerTransitionCoordinator>)coordinator {
-    <#code#>
+    
 }
 
 - (void)willTransitionToTraitCollection:(nonnull UITraitCollection *)newCollection withTransitionCoordinator:(nonnull id<UIViewControllerTransitionCoordinator>)coordinator {
-    <#code#>
+    
 }
 
 - (void)didUpdateFocusInContext:(nonnull UIFocusUpdateContext *)context withAnimationCoordinator:(nonnull UIFocusAnimationCoordinator *)coordinator {
-    <#code#>
+    
 }
 
 - (void)setNeedsFocusUpdate {
-    <#code#>
+    
 }
 
 - (BOOL)shouldUpdateFocusInContext:(nonnull UIFocusUpdateContext *)context {
@@ -71,7 +92,7 @@
 }
 
 - (void)updateFocusIfNeeded {
-    <#code#>
+    
 }
 
 @end
