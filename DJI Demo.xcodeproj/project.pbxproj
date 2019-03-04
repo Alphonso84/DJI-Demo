@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C22635E1EC7573FFC023B94 /* libPods-DJI Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1BFC1915150CBD79BC9138A /* libPods-DJI Demo.a */; };
 		894DA0B5222CB10C00D19D49 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 894DA0B4222CB10C00D19D49 /* AppDelegate.m */; };
 		894DA0B8222CB10C00D19D49 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 894DA0B7222CB10C00D19D49 /* ViewController.m */; };
 		894DA0BB222CB10C00D19D49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 894DA0B9222CB10C00D19D49 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02C13C3C90E5A0E637629174 /* Pods-DJI Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DJI Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DJI Demo/Pods-DJI Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		894DA0B0222CB10C00D19D49 /* DJI Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DJI Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		894DA0B3222CB10C00D19D49 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		894DA0B4222CB10C00D19D49 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +28,8 @@
 		894DA0BF222CB10E00D19D49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		894DA0C1222CB10E00D19D49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		894DA0C2222CB10E00D19D49 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8CD070D1E1DAAC15A820295E /* Pods-DJI Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DJI Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-DJI Demo/Pods-DJI Demo.release.xcconfig"; sourceTree = "<group>"; };
+		D1BFC1915150CBD79BC9138A /* libPods-DJI Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DJI Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C22635E1EC7573FFC023B94 /* libPods-DJI Demo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4857E5CF8A60E553F77DCA3A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				02C13C3C90E5A0E637629174 /* Pods-DJI Demo.debug.xcconfig */,
+				8CD070D1E1DAAC15A820295E /* Pods-DJI Demo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		894DA0A7222CB10C00D19D49 = {
 			isa = PBXGroup;
 			children = (
 				894DA0B2222CB10C00D19D49 /* DJI Demo */,
 				894DA0B1222CB10C00D19D49 /* Products */,
+				4857E5CF8A60E553F77DCA3A /* Pods */,
+				C137B671D6D2B6F2CDF99A11 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +87,14 @@
 			path = "DJI Demo";
 			sourceTree = "<group>";
 		};
+		C137B671D6D2B6F2CDF99A11 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D1BFC1915150CBD79BC9138A /* libPods-DJI Demo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 894DA0C6222CB10E00D19D49 /* Build configuration list for PBXNativeTarget "DJI Demo" */;
 			buildPhases = (
+				922BBA767F2D0C21CF24AC23 /* [CP] Check Pods Manifest.lock */,
 				894DA0AC222CB10C00D19D49 /* Sources */,
 				894DA0AD222CB10C00D19D49 /* Frameworks */,
 				894DA0AE222CB10C00D19D49 /* Resources */,
+				77BA689B11466DE1608C4C1D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -135,6 +161,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		77BA689B11466DE1608C4C1D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DJI Demo/Pods-DJI Demo-frameworks.sh",
+				"${PODS_ROOT}/DJI-SDK-iOS/iOS_Mobile_SDK/DJISDK.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DJISDK.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DJI Demo/Pods-DJI Demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		922BBA767F2D0C21CF24AC23 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DJI Demo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		894DA0AC222CB10C00D19D49 /* Sources */ = {
@@ -283,10 +356,12 @@
 		};
 		894DA0C7222CB10E00D19D49 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02C13C3C90E5A0E637629174 /* Pods-DJI Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6257XTCRBF;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "DJI Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -300,10 +375,12 @@
 		};
 		894DA0C8222CB10E00D19D49 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CD070D1E1DAAC15A820295E /* Pods-DJI Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6257XTCRBF;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "DJI Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
